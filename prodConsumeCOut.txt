@@ -1,0 +1,234 @@
+Creating Consumer1
+Creating Producer1
+Creating Consumer2
+Creating Producer2
+Creating Consumer3
+Creating Producer3
+Creating Consumer4
+Creating Producer4
+Creating Consumer5
+Creating Producer5
+Executing Producer1
+Consumer locked
+Consumer waiting
+Producer Locked
+Producer creating widget 0
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer creating widget 1
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer consuming widget 1
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer waiting
+Consumer locked
+Consumer waiting
+Producer Locked
+Producer creating widget 0
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer creating widget 1
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer consuming widget 1
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer waiting
+Consumer waiting
+Producer creating widget 2
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer consuming widget 2
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer waiting
+Producer creating widget 3
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer consuming widget 2
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer waiting
+Producer creating widget 2
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer consuming widget 3
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer waiting
+Producer Locked
+Producer creating widget 0
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer creating widget 1
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer consuming widget 3
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer waiting
+Consumer waiting
+Producer creating widget 4
+Signaling Consumer
+Producer unlocked
+Consumer consuming widget 4
+Signaling Producer
+Consumer unlocked
+Producer creating widget 3
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer consuming widget 4
+Signaling Producer
+Consumer unlocked
+Producer creating widget 4
+Signaling Consumer
+Producer unlocked
+Producer waiting
+Consumer locked
+Consumer consuming widget 1
+Signaling Producer
+Consumer unlocked
+Producer creating widget 2
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer locked
+Consumer consuming widget 2
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer waiting
+Producer creating widget 3
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer consuming widget 3
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer waiting
+Producer creating widget 4
+Signaling Consumer
+Producer unlocked
+Consumer consuming widget 4
+Signaling Producer
+Consumer unlocked
+Producer Locked
+Producer creating widget 0
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer creating widget 1
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer locked
+Consumer consuming widget 1
+Signaling Producer
+Consumer unlocked
+Producer creating widget 2
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer locked
+Consumer consuming widget 2
+Signaling Producer
+Consumer unlocked
+Producer creating widget 3
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer locked
+Consumer consuming widget 3
+Signaling Producer
+Consumer unlocked
+Producer creating widget 4
+Signaling Consumer
+Producer unlocked
+Consumer locked
+Consumer consuming widget 4
+Signaling Producer
+Consumer unlocked
+Producer Locked
+Producer creating widget 0
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer creating widget 1
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer locked
+Consumer consuming widget 1
+Signaling Producer
+Consumer unlocked
+Producer creating widget 2
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer locked
+Consumer consuming widget 2
+Signaling Producer
+Consumer unlocked
+Producer creating widget 3
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer locked
+Consumer consuming widget 3
+Signaling Producer
+Consumer unlocked
+Producer creating widget 4
+Signaling Consumer
+Producer unlocked
+Executing Consumer1
+Consumer locked
+Consumer consuming widget 4
+Signaling Producer
+Consumer unlocked
+Executing Producer2
+Executing Consumer2
+Executing Producer3
+Executing Consumer3
+Executing Producer4
+Executing Consumer4
+Executing Producer5
+Executing Consumer5
+
+//Each producer and each consumer has it's own thread, so each pair makes/consumes 5 widgets.  However, the joins on the later threads are not necessary because it is all executed from the first producer/consumer pair.
+
+//D) It definitely makes a difference if there are more consumers than producers - the final consumer ends up waiting forever and never terminates.  If there are more producers than consumers, the final producer goes to sleep waiting for its widgets to be consumed, and never wakes up to terminate.
+
+

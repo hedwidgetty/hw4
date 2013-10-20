@@ -1,0 +1,43 @@
+Creating Consumer
+Creating Producer
+Executing Producer
+Producer Locked
+Producer creating widget 0
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer creating widget 1
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer locked
+Consumer consuming widget 1
+Signaling Producer
+Consumer unlocked
+Producer creating widget 2
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer locked
+Consumer consuming widget 2
+Signaling Producer
+Consumer unlocked
+Producer creating widget 3
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer locked
+Consumer consuming widget 3
+Signaling Producer
+Consumer unlocked
+Producer creating widget 4
+Signaling Consumer
+Producer unlocked
+Executing Consumer
+Consumer locked
+Consumer consuming widget 4
+Signaling Producer
+Consumer unlocked

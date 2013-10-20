@@ -1,0 +1,46 @@
+Creating Consumer
+Creating Producer
+Executing Consumer
+Producer Locked
+Producer creating widget 0
+Signaling Consumer
+Producer unlocked
+Consumer locked
+Consumer waiting
+Producer Locked
+Producer creating widget 1
+Signaling Consumer
+Producer unlocked
+Consumer consuming widget 1
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer waiting
+Producer Locked
+Producer creating widget 2
+Signaling Consumer
+Producer unlocked
+Consumer consuming widget 2
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer waiting
+Producer Locked
+Producer creating widget 3
+Signaling Consumer
+Producer unlocked
+Consumer consuming widget 3
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer waiting
+Producer Locked
+Producer creating widget 4
+Signaling Consumer
+Producer unlocked
+Consumer consuming widget 4
+Signaling Producer
+Consumer unlocked
+Executing Producer
+
+//In part A, the producer was joined first and began it's execution, signalling the consumer to wake up once it had made a widget.  In the end, the consumer thread was executed by the join to consume the final widget because once the producer made the final widget, the thread exited.  In part B, the consumer was joined first, and immediately woke the producer because it had nothing to consume.  The producer and consumer alternated until all 4 widgets were created and consumed and then the consumer thread ended, but because the producer had already made all for widgets, the join just exited the thread.  I also learned that even though the consumer was locked, calling pthread_cond_wait automatically unlocks execution continues and it is automatically locked again.

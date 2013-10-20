@@ -1,0 +1,79 @@
+Producer creating widget 9
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer creating widget 10
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer waiting
+Consumer consuming widget 10
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer consuming widget 9
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer consuming widget 8
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer consuming widget 7
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer consuming widget 6
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer consuming widget 5
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer consuming widget 4
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer consuming widget 3
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer consuming widget 2
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer consuming widget 1
+Signaling Producer
+Consumer unlocked
+Consumer locked
+Consumer waiting
+Producer creating widget 1
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer creating widget 2
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer creating widget 3
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer creating widget 4
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer creating widget 5
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer creating widget 6
+Signaling Consumer
+Producer unlocked
+Producer Locked
+Producer creating widget 7
+Signaling Consumer
+Producer unlocked
+
+//No, it would never get to the other producers/consumers, unless you made 5 buffers.  This seems to be producing all 10, then consuming and going back and forth, taking turns, so this would go on forever and the other threads would never get their turn.  But when I ran it, sometimes it would say Producer waiting twice in a row, so maybe it was changing out between which producer was producing and which consumer was consuming.  But the other joins would never be executed.
